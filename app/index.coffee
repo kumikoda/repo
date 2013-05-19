@@ -5,5 +5,5 @@ app.use require 'users'
 app.use require 'repos'
 app.use require 'reviews'
 
-app.listen 3000, ->
-	console.log 'listening on port 3000'
+app.listen 5100, ->
+	console.log 'APP listening on port 5100'
