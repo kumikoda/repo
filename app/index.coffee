@@ -5,5 +5,11 @@ app.use require 'users'
 app.use require 'repos'
 app.use require 'reviews'
 
-app.listen 5100, ->
-	console.log 'APP listening on port 5100'
+app.set 'views', 'app/views'
+app.set 'view engine', 'jade'
+
+app.get '/', (req, res)->
+	res.render 'index'
+
+app.listen 3000, ->
+	console.log 'APP listening on port 3000'
