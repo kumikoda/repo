@@ -6,12 +6,12 @@ Repo is my first personal project. A yelp for open source projects.
 
 1. mongo
 	
-	brew install mongodb
+  brew install mongodb
 
 2. foreman
 
-	npm install -g foreman
+  npm install -g foreman
 
 ## Run
 
-    $ nf start
+  $ nf start

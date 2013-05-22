@@ -10,6 +10,7 @@
     "jade": "*",
     "stylus": "*",
     "coffee-script":"1.6.x",
-    "connect-coffee-script":"*"
+    "connect-coffee-script":"*",
+    "mongoose":"*"
   }
 }

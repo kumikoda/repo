@@ -3,11 +3,11 @@ app = express()
 
 
 allowCrossDomain = (req, res, next) ->
-    res.header 'Access-Control-Allow-Origin', 'http://localhost:3000'
-    res.header 'Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE'
-    res.header 'Access-Control-Allow-Headers', 'Content-Type'
+  res.header 'Access-Control-Allow-Origin', 'http://localhost:3000'
+  res.header 'Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE'
+  res.header 'Access-Control-Allow-Headers', 'Content-Type'
 
-    next()
+  next()
 
 
 
@@ -20,7 +20,7 @@ app.use allowCrossDomain
 app.use app.router
 
 app.get "/test", (req,res) ->
-	res.send('yay')
+  res.send('yay')
 
 app.listen 5000, ->
-	console.log 'API listening on port 5000'
+  console.log 'API listening on port 5000'
