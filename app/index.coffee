@@ -3,9 +3,9 @@ app = express()
 coffeescript = require 'connect-coffee-script'
 stylus = require 'stylus' 
 
-app.use require 'users'
-app.use require 'repos'
-app.use require 'reviews'
+app.use require 'app/users'
+app.use require 'app/repos'
+app.use require 'app/reviews'
 
 app.set 'views', 'app/views'
 app.set 'view engine', 'jade'
