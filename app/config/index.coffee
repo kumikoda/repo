@@ -1,18 +1,34 @@
 express = require 'express'
-app = module.exports = express()
 coffeescript = require 'connect-coffee-script'
 stylus = require 'stylus' 
+nib = require 'nib'
+
+module.exports = (app) ->
+
+  # express stuff
+  app.use express.bodyParser()
+  app.use express.cookieParser()
+  app.use express.logger 'dev'
+  app.use app.router
+
+  # jade
+  app.set 'view engine', 'jade'
+
+  # coffeescript
+  app.use coffeescript  
+    src:__dirname + '/../public'
+    bare: true  
+
+  # stylus + nib
+  app.use stylus.middleware
+    src:__dirname + '/../public'
+    compile:compile  
+
+  # public directory
+  app.use express.static __dirname + '/../public'
 
 
-app.set 'views', './../views'
-app.set 'view engine', 'jade'
-app.use express.bodyParser()
-app.use express.cookieParser()
-app.use express.logger 'dev'
-app.use coffeescript { src: './../public', bare: true } 
-app.use stylus.middleware {  src: './../public' , compile:compile } 
-app.use express.static  './../public' 
-
+# compile function for using nib
 compile = (str, path) ->
   return stylus(str)
     .set('filename', path)
