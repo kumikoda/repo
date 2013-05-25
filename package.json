@@ -9,6 +9,7 @@
     "express": "3.2.4",
     "jade": "*",
     "stylus": "*",
+    "nib":"*",
     "coffee-script":"1.6.x",
     "connect-coffee-script":"*",
     "mongoose":"*"
