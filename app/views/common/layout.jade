@@ -4,10 +4,10 @@ html(lang="en")
     title= title
 
   //- Styles
-  link(rel='stylesheet', href='/vendor/bootstrap/css/bootstrap.min.css')
 
+  link(rel="stylesheet", href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css")
+  link(rel="stylesheet", href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css")
   link(rel='stylesheet', href='/styles/styles.css')
-  link(rel='stylesheet', href='/vendor/bootstrap/css/bootstrap-responsive.css')
 
   block styles
 
@@ -17,7 +17,7 @@ html(lang="en")
     .container  
       block content
 
-    include footer
+      include footer
       
 
   //- Scripts

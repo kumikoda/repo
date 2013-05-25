@@ -1,4 +1,70 @@
 extends common/layout
 
+block styles
+  link(rel='stylesheet', href='/styles/repo.css')
+
+
 block content
-  h1 repo.jade
+  .head.row.well
+
+    h1 Express
+    a(href='#') http://expressjs.com/
+
+    .stars.large
+      i.icon-star
+      i.icon-star
+      i.icon-star
+      i.icon-star
+      i.icon-star  
+
+    p Language :  javascript
+    p Categories : node, web development, frameworks
+
+  .reviews.row
+    ul.unstyled
+      
+      li.review
+        .avatar
+          .inner
+            img.pic(src='http://lorempixel.com/44/44/')
+            a.username kumikoda
+         
+        .story
+          .inner
+            .stars.rating
+              i.icon-star
+              i.icon-star
+              i.icon-star
+              i.icon-star
+              i.icon-star 
+            span.date 5/2/22
+            
+            h4 express is awesome
+            p express is really aweosme man
+            
+     
+      li.review
+        .avatar
+          .inner
+            img.pic(src='http://lorempixel.com/44/44/')
+            a.username kevindwu
+         
+        .story
+          .inner
+            .stars.rating
+              i.icon-star
+              i.icon-star
+              i.icon-star
+              i.icon-star
+              i.icon-star 
+            span.date 4/6/22
+            
+            h4 i dont get express at all
+            p i think we should just use php instead
+            
+      
+    
+      
+    
+ 
+

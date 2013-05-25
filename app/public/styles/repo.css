@@ -1,0 +1,36 @@
+.stars {
+  color: #ffd700;
+}
+.stars.large {
+  font-size: 24px;
+}
+.review {
+  border-bottom: 1px solid #808080;
+}
+.review .avatar {
+  width: 120px;
+  float: left;
+  margin-right: 7px;
+}
+.review .avatar .inner {
+  margin: 10px 10px 0 0;
+}
+.review .avatar .inner .username {
+  display: block;
+}
+.review .avatar .inner .pic {
+  display: block;
+}
+.review .story {
+  display: table-cell;
+  vertical-align: top;
+}
+.review .story .inner {
+  margin: 10px 0 0 0;
+}
+.review .story .rating {
+  display: inline-block;
+}
+.review .story .date {
+  margin-left: 10px;
+}
