@@ -1,0 +1,19 @@
+//- Template for a single review living inside of a repo page
+li.review
+  .avatar
+    .inner
+      img.pic(src='http://lorempixel.com/44/44/')
+      a.username= review.user.name
+   
+  .story
+    .inner
+      .stars.rating
+        i.icon-star
+        i.icon-star
+        i.icon-star
+        i.icon-star
+        i.icon-star 
+      span.date 5/2/22
+      
+      h4= review.story.title
+      p= review.story.text
