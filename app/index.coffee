@@ -1,11 +1,15 @@
 express = require 'express'
-app  = express()
+app = express()
 
-# Config 
-require('./config')(app)
+# Express Config 
+app.use express.bodyParser()
+app.use express.cookieParser()
+app.use express.logger 'dev'
+app.use app.router
 
-# Routes
-app.use require './routes'
+# View Controllers
+app.use require './lib/common'
+app.use require './lib/repo'
 
 
 # Server
