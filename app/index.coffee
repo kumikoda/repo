@@ -1,14 +1,9 @@
-express = require 'express'
-app = express()
-
-# Express Config 
-app.use express.bodyParser()
-app.use express.cookieParser()
-app.use express.logger 'dev'
-app.use app.router
+# App config
+app = require('./config/mvc')(__dirname)
+require('./config/server')(app) 
 
 # View Controllers
-app.use require './lib/common'
+app.use require './lib/index'
 app.use require './lib/repo'
 
 

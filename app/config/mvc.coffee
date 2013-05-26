@@ -1,18 +1,19 @@
 ###
-  A generator for a pre-configured mvc app
 
-  - app
-    - styles
-    - scripts
-    - views
-    - index.coffee
+A generator for a pre-configured mountable mvc app-module
+
+> app
+  > styles
+  > scripts
+  > views
+    index.coffee
 
 ###
 
-express = require 'express'
 coffeescript = require 'connect-coffee-script'
 stylus = require 'stylus' 
 nib = require 'nib'
+express = require 'express'
 
 module.exports = (dirname) ->
 
@@ -24,12 +25,12 @@ module.exports = (dirname) ->
 
   # coffeescript
   app.use coffeescript  
-    src: dirname + '/scripts'
+    src: dirname 
     bare: true  
 
   # stylus + nib
   app.use stylus.middleware
-    src: dirname + '/styles'
+    src: dirname 
     compile: (str, path) ->
       return stylus(str)
         .set('filename', path)

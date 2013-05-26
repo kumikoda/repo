@@ -1,4 +1,4 @@
-extends ../../common/views/layout
+extends ../../../views/layout
 
 block styles
   link(rel='stylesheet', href='/styles/repo.css')
@@ -22,8 +22,6 @@ block content
 
   .reviews.row
     ul.unstyled
-      reviews = [{user:{ name: 'Anson'}, story:{title:'jade is awesome', story:"learning jade wasnt so hard"}}]
-
       each review in reviews
         include review
 
