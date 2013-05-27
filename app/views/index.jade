@@ -1,0 +1,25 @@
+extends layout
+
+block styles
+  link(rel='stylesheet', href='/styles/index.css')
+
+block scripts
+
+
+block content
+  .jumbotron.masthead.row 
+    .span6
+      h1.heading Find Software Smarter, Together
+      h2.subheading Find the right open source library for your next project
+
+    form.signup.well.span4(action='/users', method='post')
+      h2 
+      input(type="text", name='user[name]', placeholder="Pick a username")
+      input(type="text", name='user[email]', placeholder="Your email")
+      input(type="password", name='user[password]', placeholder="Choose a password")
+      button.btn.btn-large.btn-primary(type="submit") Sign up   
+
+    
+
+
+

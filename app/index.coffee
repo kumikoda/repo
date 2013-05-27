@@ -1,14 +1,18 @@
-# App config
-app = require('./config/mvc')(__dirname)
-require('./config/server')(app) 
+app = require('lib/config')()
 
-# View Controllers
-app.use require './lib/index'
-app.use require './lib/repo'
+
+# App initialization and configuration
+require('lib/database')
+require('lib/authentication')(app)
+
+
+# Mount the routes
+app.use require 'routes/index'
+app.use require 'routes/repo'
+app.use require 'routes/home'
 
 
 # Server
 app.listen process.env.PORT || 3000, ->
   console.log 'APP listening on port 3000'
-
 

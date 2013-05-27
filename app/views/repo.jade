@@ -1,4 +1,4 @@
-extends ../../../views/layout
+extends layout
 
 block styles
   link(rel='stylesheet', href='/styles/repo.css')
@@ -23,7 +23,7 @@ block content
   .reviews.row
     ul.unstyled
       each review in reviews
-        include review
+        include partials/review
 
 
 

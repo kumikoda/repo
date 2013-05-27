@@ -12,6 +12,9 @@
     "nib":"*",
     "coffee-script":"1.6.x",
     "connect-coffee-script":"*",
-    "mongoose":"*"
+    "mongoose":"*",
+    "passport":"*",
+    "passport-local" : "*",
+    "connect-flash" : "0.1.x"
   }
 }

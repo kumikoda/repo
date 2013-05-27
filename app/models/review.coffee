@@ -10,4 +10,4 @@ schema = Schema
   text    : { type: String, required: true}
 
 
-module.exports = mongoose.model('Reviews', schema)
+module.exports = mongoose.model('Review', schema)
