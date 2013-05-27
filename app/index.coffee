@@ -10,6 +10,7 @@ require('lib/authentication')(app)
 app.use require 'routes/index'
 app.use require 'routes/repo'
 app.use require 'routes/home'
+app.use require 'routes/users'
 
 
 # Server

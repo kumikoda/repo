@@ -4,9 +4,11 @@ passport = require('passport')
 LocalStrategy = require('passport-local').Strategy
 
 # Routes
-app.get '/', (req,res) ->
+app.get '/', (req,res) -> 
   res.render 'index', 
     title: 'Repo'
+    message: req.flash('error')
+
 
 
 app.get '/users', (req,res) ->
