@@ -16,7 +16,7 @@ app.post '/users', new_user = (req, res, next) ->
       req.logIn usr, (err) ->
         if err 
           return next(err)
-        res.redirect('/home')
+        res.redirect('/account')
       
     
   

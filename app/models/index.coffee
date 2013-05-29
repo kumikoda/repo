@@ -1,3 +1,3 @@
 require './user'
-require './repo'
+require './module'
 require './review'

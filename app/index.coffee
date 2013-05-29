@@ -7,9 +7,9 @@ require('lib/authentication')(app)
 
 
 # Mount the routes
-app.use require 'routes/index'
-app.use require 'routes/repo'
-app.use require 'routes/home'
+app.use require 'routes/signup'
+app.use require 'routes/modules'
+app.use require 'routes/account'
 app.use require 'routes/users'
 
 

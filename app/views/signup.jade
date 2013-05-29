@@ -1,18 +1,19 @@
 extends layout
 
 block styles
-  link(rel='stylesheet', href='/styles/index.css')
+  link(rel='stylesheet', href='/styles/singup.css')
 
 block scripts
 
 
 block content
-  .jumbotron.masthead.row 
-    .span6
+  .jumbotron.masthead.row-fluid
+  
+    .span7
       h1.heading Find Software Smarter, Together
       h2.subheading Find the right open source library for your next project
 
-    form.signup.well.span4(action='/users', method='post')
+    form.signup.span5(action='/users', method='post')
       if message != ''
         p.alert.alert-error #{message}
 

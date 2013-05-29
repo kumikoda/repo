@@ -5,12 +5,8 @@ LocalStrategy = require('passport-local').Strategy
 
 # Routes
 app.get '/', (req,res) -> 
-  res.render 'index', 
-    title: 'Repo'
+  res.render 'signup', 
+    title: 'Welcome'
     message: req.flash('error')
 
-
-
-app.get '/users', (req,res) ->
-  res.redirect '/home'
 

@@ -1,0 +1,37 @@
+extends layout
+
+block styles
+  link(rel='stylesheet', href='/styles/module.css')
+
+block scripts
+
+
+block content
+  
+    h1.heading Tell us about a new module
+
+    form.form-horizontal.create(action='/modules', method='post')
+      .control-group
+        label.control-label(for="name") name
+        .controls
+          input(type="text", id="name", placeholder="Name", name='module[name]')
+      .control-group
+        label.control-label(for="language") language
+        .controls
+          input(type="text", id="language", placeholder="eg. javscript", name='module[language]')
+      .control-group
+        label.control-label(for="url") url
+        .controls
+          input.input-xlarge(type="text", id="url", placeholder="www.github.com/kumikoda/repo", name='module[url]')
+
+      button.btn.btn-large.btn-primary(type="submit") add!
+        
+      
+        
+      
+      
+        
+      
+      
+
+
