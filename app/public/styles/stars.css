@@ -1,0 +1,6 @@
+.stars {
+  color: #ffd700;
+}
+.stars.large {
+  font-size: 24px;
+}
