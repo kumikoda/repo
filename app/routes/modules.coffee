@@ -3,9 +3,20 @@ mongoose = require 'mongoose'
 Module = mongoose.model 'Module'
 
 app.get '/module/:name', (req,res) ->
-  res.render 'module', 
-    title: req.params.name
-    reviews: []
+  Module.findOne {name:req.params.name},  (err, module)->
+    if err or !module 
+      console.log(err)
+      res.send(404)
+    
+    else
+      module.populate '_categories', '_reviews', ->
+        res.render 'module', 
+          title : module.name
+          module : module
+
+        
+  
+    
 
 app.get '/module', (req,res) ->
   res.render 'new_module',

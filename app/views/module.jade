@@ -1,28 +1,30 @@
 extends layout
+include mixins/stars
 
 block styles
   link(rel='stylesheet', href='/styles/module.css')
+  link(rel='stylesheet', href='/styles/stars.css')
+
 
 
 block content
   .head.row.well
 
-    h1 Express
-    a(href='#') http://expressjs.com/
+    h1= module.name
+    a(href='#')= module.url
+          
+    mixin stars(module.rating)
 
-    .stars.large
-      i.icon-star
-      i.icon-star
-      i.icon-star
-      i.icon-star
-      i.icon-star  
 
-    p Language :  javascript
-    p Categories : node, web development, frameworks
+    p Language : #{module.language}
+    p Categories 
+    each category in module.categories
+      #{category}
+
 
   .reviews.row
     ul.unstyled
-      each review in reviews
+      each review in module.reviews
         include partials/review
 
 

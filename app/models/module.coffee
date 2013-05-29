@@ -10,9 +10,12 @@ moduleSchema = Schema
 
   official    : { type: Boolean}
   
-  categories  : [{ type: String }]
-  reviews     : [{ type: Schema.Types.ObjectId, ref: 'Review' }]
+  categories : [{ type: Schema.Types.ObjectId, ref: 'Review' }]
+  reviews    : [{ type: Schema.Types.ObjectId, ref: 'Review' }]
 
+
+moduleSchema.virtual('rating').get () ->
+  return 3.5
 
 
 module.exports = mongoose.model('Module', moduleSchema)
