@@ -8,3 +8,13 @@ mixin stars(rating)
     - for (var i = Math.ceil(rating); i < 5; ++i) {
       .icon-star-empty
     - }
+
+
+
+mixin rater
+  .stars.large.rater
+    .icon-star-empty.star(data-star=1)
+    .icon-star-empty.star(data-star=2)
+    .icon-star-empty.star(data-star=3)
+    .icon-star-empty.star(data-star=4)
+    .icon-star-empty.star(data-star=5)

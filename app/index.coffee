@@ -11,6 +11,7 @@ app.use require 'routes/signup'
 app.use require 'routes/modules'
 app.use require 'routes/account'
 app.use require 'routes/users'
+app.use require 'routes/reviews'
 
 
 # Server

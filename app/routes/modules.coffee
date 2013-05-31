@@ -14,14 +14,15 @@ app.get '/module/:name', (req,res) ->
           title : module.name
           module : module
 
-        
-  
-    
+ 
 
 app.get '/module', (req,res) ->
   res.render 'new_module',
     title: 'New Module'
 
+app.get '/modules', (req,res) ->
+  console.log 'list all modules'
+  res.render 'index'
 
 
 app.post '/modules', (req,res) ->
@@ -31,7 +32,7 @@ app.post '/modules', (req,res) ->
     if err
       console.log(err)
       req.flash('error', err.message)
-      res.redirect('/')
+      res.redirect('/module/')
     else 
       console.log('module: ' + module.name + " saved.") 
       res.redirect('/module/'+module.name)

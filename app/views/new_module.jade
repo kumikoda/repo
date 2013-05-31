@@ -10,24 +10,22 @@ block content
   
     h1.heading Tell us about a new module
 
-    form.form-horizontal.create(action='/modules', method='post')
-      .control-group
-        label.control-label(for="name") name
-        .controls
-          input(type="text", id="name", placeholder="Name", name='module[name]')
-      .control-group
-        label.control-label(for="language") language
-        .controls
-          input(type="text", id="language", placeholder="eg. javscript", name='module[language]')
-      .control-group
-        label.control-label(for="url") url
-        .controls
-          input.input-xlarge(type="text", id="url", placeholder="www.github.com/kumikoda/repo", name='module[url]')
-
-      button.btn.btn-large.btn-primary(type="submit") add!
+    form.create(action='/modules', method='post')
+      .section  
+        label.control-label module name
+        input(type="text", id="name", placeholder="Name", name='module[name]')
+      .section
+        label.control-label language
+        input(type="text", id="language", placeholder="eg. javscript", name='module[language]')
+      .section    
+        label.control-label url
         
-      
+        input.input-xlarge(type="text", id="url", placeholder="www.github.com/kumikoda/repo", name='module[url]')
+      .section
+        button.btn.btn-large.btn-primary(type="submit") add!
+          
         
+          
       
       
         
