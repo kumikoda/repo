@@ -1,0 +1,26 @@
+
+extends layout
+include mixins/stars
+
+block scripts
+  script(src='/scripts/stars.js')
+
+block styles
+  link(rel='stylesheet', href='/styles/forms.css')
+  link(rel='stylesheet', href='/styles/stars.css')
+
+block content
+  h1.heading Post a review for 
+    a(href='/module/#{module.name}')= module.name
+
+  form.form-horizontal.create(action='/reviews', method='post')
+    input(type="hidden", name='review[module]', value= '#{module.name}')
+    mixin rater 
+    .section
+      input(type="text", id="title", placeholder="Title", name='review[title]')
+    .section
+      textarea.block(cols='80', rows='8', id="body", placeholder="eg. javscript", name='review[text]')
+    .section
+      button.btn.btn-large.btn-primary(type="submit") post!
+
+  

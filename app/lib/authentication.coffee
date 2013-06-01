@@ -50,7 +50,10 @@ module.exports = (app) ->
           return done null, false, { message: 'Invalid password' } 
         
       
-    
+  ensureAuthenticated = (req, res, next) ->
+      if (req.isAuthenticated()) 
+         return next(); 
+      res.redirect('/')  
   
 
   rememberMe = (req, res, next) ->
@@ -62,4 +65,5 @@ module.exports = (app) ->
   app.use passport.initialize()
   app.use passport.session()
   app.use rememberMe
-  
+  app.set 'ensureAuthenticated', ensureAuthenticated
+    

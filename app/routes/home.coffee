@@ -1,8 +1,8 @@
 app = module.exports = require('lib/config')()
 ensureAuthenticated = app.get 'ensureAuthenticated'
 
-app.get '/account', ensureAuthenticated, (req,res) ->
+app.get '/home', ensureAuthenticated, (req,res) ->
   
-  res.render 'account', 
-    title: 'Account'
+  res.render 'home', 
+    title: 'Home'
     user: req.user

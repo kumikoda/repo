@@ -3,10 +3,14 @@ stylus = require 'stylus'
 nib = require 'nib'
 express = require 'express'
 flash = require 'connect-flash'
+authentication = require 'lib/authentication'
 
 module.exports = () ->
 
   app = express()
+
+  # configure authentication
+  authentication(app)
 
   # jade 
   app.set 'views', __dirname + '/../views'

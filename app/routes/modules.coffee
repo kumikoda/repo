@@ -3,26 +3,30 @@ mongoose = require 'mongoose'
 Module = mongoose.model 'Module'
 
 app.get '/module/:name', (req,res) ->
+
   Module.findOne {name:req.params.name},  (err, module)->
     if err or !module 
       console.log(err)
       res.send(404)
     
     else
-      module.populate '_categories', '_reviews', ->
-        res.render 'module', 
-          title : module.name
-          module : module
+      res.render 'module', 
+        title : module.name
+        module : module
+        user: req.user
 
- 
+
 
 app.get '/module', (req,res) ->
   res.render 'new_module',
     title: 'New Module'
+    user: req.user
 
 app.get '/modules', (req,res) ->
   console.log 'list all modules'
-  res.render 'index'
+  res.render 'index',
+    title: "List of modules"
+    user: req.user
 
 
 app.post '/modules', (req,res) ->

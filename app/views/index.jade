@@ -14,12 +14,17 @@ block content
       h2.subheading Find the right open source library for your next project
 
     form.signup.span5(action='/users', method='post')
-      if message != ''
-        p.alert.alert-error #{message}
+      .section
+        if message != ''
+          p.alert.alert-error #{message}
 
-      input(type="text", name='user[username]', placeholder="Pick a username")
-      input(type="text", name='user[email]', placeholder="Your email")
-      input(type="password", name='user[password]', placeholder="Choose a password")
+      .section
+        input(type="text", name='user[username]', placeholder="Pick a username")
+      .section
+        input(type="text", name='user[email]', placeholder="Your email")
+      .section
+        input(type="password", name='user[password]', placeholder="Choose a password")
+      .section
       button.btn.btn-large.btn-primary(type="submit") Sign up   
 
     

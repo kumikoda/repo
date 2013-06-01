@@ -3,7 +3,7 @@ li.review
   .avatar
     .inner
       img.pic(src='http://lorempixel.com/44/44/')
-      a.username= review.user.name
+      a.username= review.user.username
    
   .story
     .inner
@@ -15,5 +15,5 @@ li.review
         i.icon-star 
       span.date 5/2/22
       
-      h4= review.story.title
-      p= review.story.text
+      h4= review.title
+      p= review.text
