@@ -15,6 +15,7 @@ block content
 
   form.form-horizontal.create(action='/reviews', method='post')
     input(type="hidden", name='review[module]', value= '#{module.name}')
+    input(id='rating', type="hidden", name='review[rating]', value=0)
     mixin rater 
     .section
       input(type="text", id="title", placeholder="Title", name='review[title]')

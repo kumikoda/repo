@@ -7,12 +7,9 @@ li.review
    
   .story
     .inner
-      .stars.rating
-        i.icon-star
-        i.icon-star
-        i.icon-star
-        i.icon-star
-        i.icon-star 
+      .stars      
+        mixin stars(review.rating)
+ 
       span.date 5/2/22
       
       h4= review.title

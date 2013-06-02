@@ -8,6 +8,7 @@ reviewSchema = Schema
   user        : { type: Schema.Types.ObjectId, ref: 'User', required: true}
   title       : { type: String, required: true}
   text        : { type: String, required: true}
+  rating      : { type: Number, required: true}
 
 # Category as sub document
 categorySchema = Schema
@@ -26,7 +27,13 @@ moduleSchema = Schema
 
 
 moduleSchema.virtual('rating').get () ->
-  return 3.5
+  reviews = @reviews
+  n = reviews.length
+  if reviews.length>0
+    sum = (review.rating for review in reviews).reduce (x,y) -> x + y
+    return sum/n
+
+
 
 
 mongoose.model('Module', moduleSchema)

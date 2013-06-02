@@ -1,13 +1,16 @@
 mixin stars(rating)
-  .stars.large
-    - for (var i = 0; i < Math.floor(rating); ++i) {
-      .icon-star
-    - }
-    if module.rating%1 > 0
-      .icon-star-half-full
-    - for (var i = Math.ceil(rating); i < 5; ++i) {
-      .icon-star-empty
-    - }
+  - for (var i = 0; i < Math.floor(rating); ++i) {
+    .icon-star.star.gold
+  - }
+
+  if (rating%1 > 0.5)
+    .icon-star.star.gold
+  else if (rating%1 > 0)
+    .icon-star-half-full.star.gold
+
+  - for (var i = Math.ceil(rating); i < 5; ++i) {
+    .icon-star-empty.star
+  - }
 
 
 

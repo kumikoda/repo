@@ -1,6 +1,15 @@
-.stars {
-  color: #ffd700;
-}
 .stars.large {
   font-size: 24px;
+}
+.stars .star {
+  color: #808080;
+}
+.stars .star:hover {
+  cursor: pointer;
+}
+.stars .star.gold {
+  color: #ffd700;
+}
+.stars .star.selected {
+  color: #f00;
 }

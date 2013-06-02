@@ -12,8 +12,9 @@ block content
 
     h1= module.name
     a(href='#')= module.url
-          
-    mixin stars(module.rating)
+         
+    .stars.large      
+      mixin stars(module.rating)
 
 
     p Language : #{module.language}
