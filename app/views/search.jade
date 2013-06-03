@@ -1,0 +1,24 @@
+extends layout
+include mixins/stars
+
+block styles
+    link(rel='stylesheet', href='/styles/search.css')
+
+
+
+block content
+  h1 Search results!
+
+  div.filters
+    p filter by language
+    p filter by category
+
+  hr
+
+  div.results
+    ul.modules
+      each module in modules
+        include partials/module
+
+
+

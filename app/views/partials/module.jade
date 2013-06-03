@@ -1,0 +1,12 @@
+h2= module.name
+
+.stars.large      
+  mixin stars(module.rating)
+p #{module.reviews.length} reviews
+
+
+a(href='#')= module.url
+p Language : #{module.language}
+p Categories :
+each category in module.categories
+  #{category}

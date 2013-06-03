@@ -9,6 +9,7 @@ app.use require 'routes/modules'
 app.use require 'routes/account'
 app.use require 'routes/users'
 app.use require 'routes/reviews'
+app.use require 'routes/search'
 
 
 # Server

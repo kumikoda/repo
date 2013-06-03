@@ -1,4 +1,7 @@
 mixin stars(rating)
+  if !rating
+    rating = 0
+
   - for (var i = 0; i < Math.floor(rating); ++i) {
     .icon-star.star.gold
   - }

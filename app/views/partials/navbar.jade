@@ -9,10 +9,14 @@
       a.brand(href="#") Repo Reviews 
       .nav-collapse.collapse
         ul.nav
-          li.active 
-            a(href="#") Home
           li 
-            a(href="/module") Add a Module 
+            form.navbar-form.pull-right(action='/search', method='get')
+              i.icon-search
+              input.span2.search-query(type="text", name='query', placeholder="Search")
+
+          li 
+            a(href="/module") Add a Module
+
         
         if !user 
           form.navbar-form.pull-right(action='/user/login', method='post')

@@ -1,0 +1,9 @@
+.nav .search-query {
+  padding-left: 29px;
+}
+.nav .icon-search {
+  position: absolute;
+  top: 11px;
+  left: 13px;
+  font-size: 16px;
+}
