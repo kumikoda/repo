@@ -9,11 +9,7 @@ reviewSchema = Schema
   title       : { type: String, required: true}
   text        : { type: String, required: true}
   rating      : { type: Number, required: true}
-
-# Category as sub document
-categorySchema = Schema
-  name        : { type: String, required: true}
-  description : { type: String, required: true}
+  tags        : [{ type: String, required: true}]
 
 # Module Schema
 moduleSchema = Schema
@@ -21,8 +17,8 @@ moduleSchema = Schema
   language    : { type: String, required: true}
   url         : { type: String, required: true}
   official    : { type: Boolean}
+  tags        : [{ type: String, required: true}]
   
-  categories : [categorySchema]
   reviews    : [reviewSchema]
 
 
@@ -38,4 +34,3 @@ moduleSchema.virtual('rating').get () ->
 
 mongoose.model('Module', moduleSchema)
 mongoose.model('Review', reviewSchema)
-mongoose.model('Category', categorySchema)

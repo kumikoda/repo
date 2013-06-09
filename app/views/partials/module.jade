@@ -7,6 +7,6 @@ p #{module.reviews.length} reviews
 
 a(href='#')= module.url
 p Language : #{module.language}
-p Categories :
-each category in module.categories
-  #{category}
+p Tags :
+each tag in module.tags
+  span #{tag}, 

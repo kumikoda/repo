@@ -32,6 +32,10 @@ app.get '/modules', (req,res) ->
 app.post '/modules', (req,res) ->
   module = new Module req.body.module
   
+  # split the string by commas and remove leading and trailing spaces
+  module.tags = module.tags.toString().split(',').map (tag)->
+    tag.trim()
+  
   module.save (err) ->
     if err
       console.log(err)

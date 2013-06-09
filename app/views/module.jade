@@ -18,9 +18,9 @@ block content
 
 
     p Language : #{module.language}
-    p Categories 
-    each category in module.categories
-      #{category}
+    p Tags :
+      each tag in module.tags
+        span #{tag}, 
 
   a(href='/review/new/module/#{module.name}') Write a review!
 

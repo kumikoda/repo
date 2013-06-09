@@ -6,7 +6,8 @@ Module = mongoose.model 'Module'
 
 
 app.get '/search', (req,res) ->
-  Module.find (err, modules)->
+  query = req.query.query 
+  Module.find().or([{tags: query}, {name:query}]).exec (err, modules)->
     res.render 'search', 
       title: 'Search'
       user: req.user
