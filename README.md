@@ -1,6 +1,7 @@
 # Repo
 
-Repo is my first personal project. A yelp for open source projects. 
+Ratings and reviews for modules and libraries.  
+> Becase small, loosely coupled modules are the future and large, tightly-bound monolithic libraries are the past! - Ender the no-libary library
 
 ## Global Dependencies
 
