@@ -4,7 +4,7 @@ html(lang="en")
     title= title
 
   //- Styles
-  link(rel="stylesheet", href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css")
+  link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css")
   link(rel="stylesheet", href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css")
   link(rel='stylesheet', href='/styles/styles.css')
 
@@ -14,6 +14,9 @@ html(lang="en")
     include partials/navbar
 
     .container.narrow-container  
+      
+      include partials/messages
+      
       block content
 
       include partials/footer

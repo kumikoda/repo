@@ -15,10 +15,6 @@ block content
 
     form.signup.span5(action='/users', method='post')
       .section
-        if message != ''
-          p.alert.alert-error #{message}
-
-      .section
         input(type="text", name='user[username]', placeholder="Pick a username")
       .section
         input(type="text", name='user[email]', placeholder="Your email")

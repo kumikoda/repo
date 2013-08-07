@@ -8,7 +8,7 @@ app.get '/', (req,res) ->
   console.log req.user
   res.render 'index', 
     title: 'Welcome'
-    message: req.flash('error')
+    errors: req.flash('error')
     user : req.user
 
 
